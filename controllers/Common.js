@@ -33,7 +33,7 @@ exports.fetchDeals = asyncHandler( async (req,res) => {
     .populate({path: "mostPopular"})
     .populate({path: "newest"})
 
-    const categories = await Category.find();
+    const categories = await Category.find().populate({path: "subCategories"});
 
     return res.status(200).json({
         deals: deals[0],

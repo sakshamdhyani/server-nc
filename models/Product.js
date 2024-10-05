@@ -72,6 +72,11 @@ const productSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "SubCategory"
     },
+
+    brand:{
+        type: String,
+    },
+
     stock: {
         type: Boolean,
         required: true,

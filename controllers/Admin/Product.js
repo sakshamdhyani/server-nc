@@ -22,7 +22,8 @@ exports.createProduct = asyncHandler(async (req, res) => {
         categoryId,
         status,
         subCategoryId,
-        gst
+        gst,
+        brand
     } = req.body;
 
     // try {
@@ -146,6 +147,7 @@ exports.createProduct = asyncHandler(async (req, res) => {
             url: uploadThemeImage.secure_url
         } : null,
         otherImages: uploadedOtherImages,
+        brand
     };
 
     if (subCategoryId) {
